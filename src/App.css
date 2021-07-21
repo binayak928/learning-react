@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+@media only screen and (max-width: 600px) {
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3rem;
+    /* overflow-y: scroll; */
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .cover {
+    display: flex;
+    /* align-items: flex-end;
+  justify-content: flex-start; */
+    height: 20vh;
+    background: url("./cover-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .display-picture {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    margin-left: 30px;
+    border: 2px solid white;
+  }
+
+  .dp {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .title-name {
+    position: relative;
+    top: -40%;
+    left: 100%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    margin-left: 30px;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+
+  .info-wrapper {
+    display: flex;
+    color: rgb(48, 48, 48);
+    background: rgb(241, 241, 241);
+    margin-top: 2vh;
+    width: 90%;
+    border-radius: 8px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 10px;
+  }
+
+  .generate {
+    background: rgb(5, 165, 157);
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    color: white;
+    border-radius: 18px;
+    margin-top: 1.2rem;
+  }
+  .unsupported {
+    display: none;
+    
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media only screen and (min-width: 601px) {
+  body {
+    animation: bg 2s linear 2s infinite alternate;
+  }
+  .main {
+    display: none;
+  }
+  .unsupported {
+    display: block;
+    height: 100vh;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes bg {
+  0% {
+    background: rgb(215, 249, 227);
+    background: linear-gradient(37deg, rgba(215, 249, 227, 0.7903536414565826) 0%, rgba(0, 212, 255, 1) 100%);
+   background-repeat: no-repeat;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background: rgb(215, 249, 227);
+    background: linear-gradient(37deg, rgba(215, 249, 227, 0.7903536414565826) 0%, rgba(0, 108, 255, 1) 100%);
+    background-repeat: no-repeat;
   }
+  100% {
+    background: rgb(215, 249, 227);
+    background: linear-gradient(37deg, rgba(215, 249, 227, 0.7903536414565826) 0%, rgba(192, 0, 255, 1) 100%);
+    background-repeat: no-repeat;}
 }
